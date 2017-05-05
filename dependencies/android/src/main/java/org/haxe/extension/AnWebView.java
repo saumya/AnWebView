@@ -16,6 +16,10 @@ import java.lang.String;
 import android.util.Log;
 import android.content.pm.PackageManager;
 
+import android.webkit.WebView;
+import android.view.Window;
+import android.net.Uri;
+
 
 /* 
 	You can use the Android Extension class in order to hook
@@ -46,10 +50,31 @@ import android.content.pm.PackageManager;
 public class AnWebView extends Extension {
 	
 
-	public static void openURL(final String url){
+	public static void openURL(final String url, final boolean isInBrowser){
 		Extension.mainActivity.runOnUiThread(new Runnable() {
 			@Override public void run() {
-				Log.d("INFO","url="+url);
+				//Log.d("INFO","url="+url);
+				/*
+				WebView webview = new WebView(Extension.mainActivity);
+				webview.getSettings().setJavaScriptEnabled(true);
+
+ 				Extension.mainActivity.setContentView(webview);
+ 				
+ 				webview.loadUrl(url);
+ 				*/
+ 				if(isInBrowser==true){
+ 					Uri uri = Uri.parse(url);
+					Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+					Extension.mainActivity.startActivity(intent);
+ 				}else{
+ 					WebView webview = new WebView(Extension.mainActivity);
+					webview.getSettings().setJavaScriptEnabled(true);
+
+	 				Extension.mainActivity.setContentView(webview);
+	 				
+	 				webview.loadUrl(url);
+ 				}
+ 				
 			}
 		});
 	}

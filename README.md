@@ -2,7 +2,7 @@ AnWebView
 ===========================
 
  - OpenFL Native Extension for **Android**
- - Opens an URL in native Webview or Browser, depening upon your choice
+ - Opens an URL in native WebView or Browser, depending upon your choice
  - Done with **Lime 4.1.0** and **OpenFL 5.0.0**
 
 ### Usage

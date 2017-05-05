@@ -63,11 +63,15 @@ public class AnWebView extends Extension {
  				}else{
  					// =============== Opens in WebView ==================
  					
- 					WebView webview = new WebView(Extension.mainActivity);
+ 					WebView webview = new WebView(Extension.mainContext);
 					WebSettings webSettings = webview.getSettings();
  					webSettings.setJavaScriptEnabled(true);
  					Extension.mainActivity.setContentView(webview);
  					webview.loadUrl(url);
+
+ 					// Remove
+ 					// Ref : http://stackoverflow.com/questions/9883089/how-to-remove-a-layout-that-was-added-using-addcontentview
+ 					//((ViewGroup) webview.getParent()).removeView(webview);
  					
  				}
  				

@@ -13,7 +13,7 @@ class AnWebView {
 	}
 
 	//private static var anwebview_sample_method_jni = JNI.createStaticMethod ("org.haxe.extension.AnWebView", "sampleMethod", "(I)I");
-	private static var anwebview_open_jni = JNI.createStaticMethod ("org.haxe.extension.AnWebView", "openURL", "(Ljava/lang/String;)I",false);
+	private static var anwebview_open_jni = JNI.createStaticMethod ("org.haxe.extension.AnWebView", "openURL", "(Ljava/lang/String;)V",false);
 	
 }
 

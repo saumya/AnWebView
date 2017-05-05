@@ -21,14 +21,15 @@ AnWebView
 
 ### Notes on NativeExtensions
 
-```
-// create
-lime create extension AnWebView
-// rebuild - before use
-lime rebuild AnWebView android
-```
-From inside the project folder 
-```
-// just rebuild before using it
-lime rebuild . android
-```
+ - create
+ ```
+ lime create extension AnWebView
+ ```
+ - rebuild - before use
+ ```
+ lime rebuild AnWebView android
+ ```
+ - From inside the project folder, rebuild before use
+ ```
+ lime rebuild . android
+ ```

@@ -54,15 +54,7 @@ public class AnWebView extends Extension {
 	public static void openURL(final String url, final boolean isInBrowser){
 		Extension.mainActivity.runOnUiThread(new Runnable() {
 			@Override public void run() {
-				//Log.d("INFO","url="+url);
-				/*
-				WebView webview = new WebView(Extension.mainActivity);
-				webview.getSettings().setJavaScriptEnabled(true);
-
- 				Extension.mainActivity.setContentView(webview);
- 				
- 				webview.loadUrl(url);
- 				*/
+				
  				if(isInBrowser==true){
  					// =============== Open in Browser ===================
  					Uri uri = Uri.parse(url);
@@ -72,7 +64,6 @@ public class AnWebView extends Extension {
  					// =============== Opens in WebView ==================
  					
  					WebView webview = new WebView(Extension.mainActivity);
-					//webview.getSettings().setJavaScriptEnabled(true);
 					WebSettings webSettings = webview.getSettings();
  					webSettings.setJavaScriptEnabled(true);
  					Extension.mainActivity.setContentView(webview);

@@ -17,6 +17,7 @@ import android.util.Log;
 import android.content.pm.PackageManager;
 
 import android.webkit.WebView;
+import android.webkit.WebSettings;
 import android.view.Window;
 import android.net.Uri;
 
@@ -63,16 +64,20 @@ public class AnWebView extends Extension {
  				webview.loadUrl(url);
  				*/
  				if(isInBrowser==true){
+ 					// =============== Open in Browser ===================
  					Uri uri = Uri.parse(url);
 					Intent intent = new Intent(Intent.ACTION_VIEW, uri);
 					Extension.mainActivity.startActivity(intent);
  				}else{
+ 					// =============== Opens in WebView ==================
+ 					
  					WebView webview = new WebView(Extension.mainActivity);
-					webview.getSettings().setJavaScriptEnabled(true);
-
-	 				Extension.mainActivity.setContentView(webview);
-	 				
-	 				webview.loadUrl(url);
+					//webview.getSettings().setJavaScriptEnabled(true);
+					WebSettings webSettings = webview.getSettings();
+ 					webSettings.setJavaScriptEnabled(true);
+ 					Extension.mainActivity.setContentView(webview);
+ 					webview.loadUrl(url);
+ 					
  				}
  				
 			}

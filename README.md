@@ -16,9 +16,6 @@ AnWebView
   AnWebView.open("http://www.openfl.org/",true);
   ```
 
-
-
-
 ### Notes on NativeExtensions
 
  - create
@@ -33,3 +30,21 @@ AnWebView
  ```
  lime rebuild . android
  ```
+
+### Other extensions
+ - [AnCam][4]
+ - [RayToast][5]
+ - [AnWebView][6]
+ - [AnAppLaunch][7]
+
+
+
+
+
+
+
+
+[4]: https://github.com/saumya/AnCam
+[5]: https://github.com/saumya/RayToast
+[6]: https://github.com/saumya/AnWebView
+[7]: https://github.com/saumya/AnAppLaunch

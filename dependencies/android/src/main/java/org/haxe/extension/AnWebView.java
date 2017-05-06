@@ -62,17 +62,22 @@ public class AnWebView extends Extension {
 					Extension.mainActivity.startActivity(intent);
  				}else{
  					// =============== Opens in WebView ==================
- 					
+ 					/*
  					WebView webview = new WebView(Extension.mainContext);
 					WebSettings webSettings = webview.getSettings();
  					webSettings.setJavaScriptEnabled(true);
  					Extension.mainActivity.setContentView(webview);
  					webview.loadUrl(url);
-
+ 					*/
  					// Remove
  					// Ref : http://stackoverflow.com/questions/9883089/how-to-remove-a-layout-that-was-added-using-addcontentview
  					//((ViewGroup) webview.getParent()).removeView(webview);
  					
+ 					// Respeccting the Android BACK button
+ 					// Ref: https://github.com/openfl/extension-webview/tree/master/dependencies/webview/src/extensions/webview
+ 					Intent intent = new Intent(Extension.mainContext, AnWebViewActivity.class);
+ 					intent.putExtra("urlString", url);
+ 					Extension.mainActivity.startActivity(intent);
  				}
  				
 			}
@@ -96,8 +101,8 @@ public class AnWebView extends Extension {
 	 * Called when the activity is starting.
 	 */
 	public void onCreate (Bundle savedInstanceState) {
-		
-		
+
+
 		
 	}
 	

@@ -5,6 +5,8 @@ AnWebView
  - Opens an URL in native WebView or Browser, depending upon your choice
  - Done with **Lime 4.1.0** and **OpenFL 5.0.0**
 
+Here is the [same extension from OpenFL][1] itself.
+
 ### Usage
 
  - Open in a WebView 
@@ -43,6 +45,8 @@ AnWebView
 
 
 
+
+[1]: https://github.com/openfl/extension-webview
 
 [4]: https://github.com/saumya/AnCam
 [5]: https://github.com/saumya/RayToast
